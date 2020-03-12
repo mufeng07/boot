@@ -2,6 +2,7 @@ package com.mufeng;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * @description: springboot启动类
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @create: 2019/12/31 16:13
  */
 @SpringBootApplication
+@EnableAsync
 public class StartBootTestApplication {
     public static void main(String[] args) {
         SpringApplication.run(StartBootTestApplication.class,args);

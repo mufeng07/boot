@@ -1,14 +1,20 @@
 package com.mufeng.bean;
 
+import org.springframework.beans.factory.BeanNameAware;
+
 /**
  * @description: TODO
  * @author: mufeng
- * @create: 2020/1/7 20:03
+ * @create: 2020/1/21 11:28
  */
-public class User {
+public class User1 implements BeanNameAware {
     private String id;
     private String name;
     private int age;
+    @Override
+    public void setBeanName(String s) {
+        id=s;
+    }
 
     public String getId() {
         return id;
@@ -36,7 +42,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "User1{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +

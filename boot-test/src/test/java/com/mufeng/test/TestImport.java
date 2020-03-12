@@ -1,9 +1,13 @@
 package com.mufeng.test;
 
 import com.mufeng.StartBootTestApplication;
+import com.mufeng.bean.User;
+import com.mufeng.bean.User1;
 import com.mufeng.config.ImportConfiguration;
+import com.mufeng.config.TestConfiguration;
 import com.mufeng.config.TestPropertySource;
 import com.mufeng.config.User1Properties;
+import com.mufeng.controller.TestController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,5 +46,19 @@ public class TestImport {
     @Test
     public void test3(){
         System.out.println(user1Properties);
+    }
+    @Autowired
+    private TestController testController;
+    @Test
+    public void test4(){
+        testController.test1("12");
+    }
+    @Test
+    public void test5(){
+        AnnotationConfigApplicationContext applicationContext=new AnnotationConfigApplicationContext(TestConfiguration.class);
+        User user = applicationContext.getBean(User.class);
+        System.out.println(user);
+        User1 user1 = applicationContext.getBean(User1.class);
+        System.out.println(user1);
     }
 }
