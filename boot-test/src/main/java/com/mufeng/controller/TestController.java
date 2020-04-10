@@ -31,4 +31,10 @@ public class TestController {
        testService.testAsync(name);
        System.out.println("TestController test1 end...");
    }
+    @RequestMapping("/test2")
+    public void test2(String name){
+        System.out.println("TestController test2 start...");
+        int a=1/0;
+        System.out.println("TestController test2 end...");
+    }
 }

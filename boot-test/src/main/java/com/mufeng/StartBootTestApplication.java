@@ -13,6 +13,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableAsync
 public class StartBootTestApplication {
     public static void main(String[] args) {
-        SpringApplication.run(StartBootTestApplication.class,args);
+        SpringApplication.run(SpringApplication.class,args);
     }
 }
