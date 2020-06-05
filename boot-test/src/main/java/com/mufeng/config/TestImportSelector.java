@@ -11,6 +11,6 @@ import org.springframework.core.type.AnnotationMetadata;
 public class TestImportSelector implements ImportSelector {
     @Override
     public String[] selectImports(AnnotationMetadata annotationMetadata) {
-        return new String[]{"com.mufeng.bean.bean2"};
+        return new String[]{"com.mufeng.bean.Bean2"};
     }
 }
